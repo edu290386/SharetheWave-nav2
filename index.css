@@ -1,0 +1,138 @@
+:root {
+    --bg-menu: #0971b8;
+    --text-menu: #EBB45C;
+    --bg-body: #F5EFF3;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;   
+}
+
+body{
+    height: 100vh;
+    background-color: var(--bg-body);
+    font-family: 'Open Sans', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+.main-header{
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+
+.ong-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-menu);
+}
+
+.ong-name img {
+    width: 60px;
+}
+
+.ong-name h1 {
+    font-size:1.3em;
+    padding-left: 5px;
+}
+
+.toogle-menu{
+    width: 22px;
+    position: absolute;
+    transform: translate(7px,-40px);    
+}
+
+.toogle-menu img:hover{
+    cursor: pointer;
+}
+
+.main-menu {
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    transform: translateY(-135%);
+    background-color: var(--bg-menu);
+}
+
+.main-menu--show{
+    transform: translateY(0);
+}
+
+.main-menu-item{
+    font-weight: 300;
+    padding-right: 20px;
+    padding-bottom: 7px;
+}
+
+.main-menu-link {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 300;
+    text-transform: uppercase; 
+    border-radius: 5px;
+}
+
+.main-menu-link:hover{
+    color: var(--text-menu);
+    padding:2px 5px 2px 5px;
+    font-weight: 400;
+}
+
+.container-social-master{
+    display: flex;
+    align-items: center;
+    padding-right: 35px;
+}
+
+.socialmedia-master{
+    width:30px;
+    padding-right: 10px;
+}
+
+@media (min-width: 925px) {
+    .main-header{
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--bg-menu);
+    }
+    
+    .main-nav{
+        flex-direction: row;
+    }
+
+    .toogle-menu{
+        display: none;
+    }
+
+
+
+    .main-menu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transform: translateY(0);
+    }
+
+    .main-menu-item{
+        padding-top: 17px;
+    }
+
+    .container-social-master{
+        padding-top: 15px;
+        padding-right: 5px;
+    }
+
+    .socialmedia-master{
+        padding: 5px;
+        height: 30px;
+    }
+    
+}
